@@ -1,4 +1,4 @@
-/* const express = require('express')
+ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
@@ -30,4 +30,4 @@ app.delete('/', (req, res) => {
 
 
 app.listen()
-console.log("hola mundo") */
+console.log("hola mundo") 
