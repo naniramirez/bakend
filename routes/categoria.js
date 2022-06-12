@@ -8,7 +8,7 @@ import { validarJWT } from "../middlewares/validar-jwt.js";
 
 const router = Router()
 
-router.get("/", validarJWT, categoriaGet)
+router.get("/", categoriaGet)
 
 router.get("/query",
     [validarJWT,
@@ -27,7 +27,7 @@ router.get("/id:id/",[validarJWT,
  validarCampos
 ], categoriaGetById)
 
-router.post('/',[validarJWT,
+router.post('/',[
 
   check("nombre", 'El nombre es obligatorio').trim().not().isEmpty().isLength({max:50}),
   check("descripcion", 'La descripcion es obligatoria').trim().not().isEmpty().isLength({max:250}),
