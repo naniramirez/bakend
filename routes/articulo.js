@@ -41,7 +41,7 @@ router.put("/:id", [validarJWT,
 
 router.post('/', [validarJWT,
   check("codigo", 'El codigo es obligatorio').trim().not().isEmpty(),
-  check("nombre", 'El nombre es obligatorio').trim().not().isEmpty().isLength({max:20}),//colocar esto si esta en modelos 
+  check("nombre", 'El nombre es obligatorio').trim().not().isEmpty().isLength({max:100}),//colocar esto si esta en modelos 
   check("categoria", 'La categoria es obligatoria').trim().not().isEmpty(),
   check("stock", 'El stock es obligatorio').trim().not().isEmpty(),
   check("impuesto", 'El impuesto es obligatorio').trim().not().isEmpty(),

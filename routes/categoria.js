@@ -29,7 +29,7 @@ router.get("/id:id/",[validarJWT,
 
 router.post('/',[validarJWT,
 
-  check("nombre", 'El nombre es obligatorio').trim().not().isEmpty().isLength({max:50}),
+  check("nombre", 'El nombre es obligatorio').trim().not().isEmpty().isLength({max:100}),
   check("descripcion", 'La descripcion es obligatoria').trim().not().isEmpty().isLength({max:250}),
   check('nombre',).custom(helperCategoria.existeCategoriaByNombre),
   validarCampos

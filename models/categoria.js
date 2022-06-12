@@ -4,7 +4,7 @@ const CategoriaSchema = mongoose.Schema({
     nombre: {
         type: String,
         required : [true, "El nombre es obligatorio"],
-        maxlength:50,
+        maxlength:100,
         unique:true
     },
     descripcion: {

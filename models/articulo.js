@@ -9,7 +9,7 @@ const ArticuloSchema = mongoose.Schema({
     nombre: {
         type: String,
         required:[true, "El nombre es obligatorio"],
-        maxlength: 20,
+        maxlength: 100,
         unique: true
     },
     categoria: { type:mongoose.Schema.Types.ObjectId, ref: 'Categoria', },
